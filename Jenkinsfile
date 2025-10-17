@@ -29,7 +29,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Seynabou26/full_stack_app.git'
+                git branch: 'main', url: 'https://github.com/gueyepapa65-bot/dev_full_stack.git'
             }
         }
 
@@ -207,14 +207,14 @@ pipeline {
             emailext(
                 subject: "Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Pipeline réussi\nDétails : ${env.BUILD_URL}",
-                to: "seynaboubadji26@gmail.com"
+                to: "gueyepapa65@gmail.com"
             )
         }
         failure {
             emailext(
                 subject: "Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Le pipeline a échoué\nDétails : ${env.BUILD_URL}",
-                to: "seynaboubadji26@gmail.com"
+                to: "gueyepapa65@gmail.com"
             )
         }
     }
