@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_HUB_USER = 'seynabou02'
+        DOCKER_HUB_USER = 'gueyepapa'
         FRONT_IMAGE = 'react-frontend'
         BACKEND_IMAGE = 'express-backend'
     }
